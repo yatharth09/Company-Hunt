@@ -55,8 +55,8 @@ const Form = ({currentId, setCurrentId}) => {
     if(!user?.result?.name){
         return(
             <Paper className= {classes.paper}>
-                <Typography variant='h6' align='center'>
-                    please Sign In to create your own memories and like others
+                <Typography variant='h6' align='center' style={{color: 'white'}}>
+                    Please Sign In!! to share your company blog
                 </Typography>
             </Paper>
         )
@@ -69,22 +69,25 @@ const Form = ({currentId, setCurrentId}) => {
                       noValidate
                       className={`${classes.root} ${classes.form}}`}
                       onSubmit={handleSubmit}>
-                    <Typography variant='h6'>{!currentId? 'Creating' : 'Editing'} a Memory</Typography>
+                    <Typography style={{ color: "Grey" }} variant='h5'><strong>{!currentId? 'Share' : 'Edit'}</strong> <span style={{fontSize: 13}}>your company experience!!!</span></Typography>
                     
                     <TextField name="title"
-                               variant = 'outlined'
+                               variant = 'filled'
+                               className={classes.text}
                                label = 'Title'
                                fullWidth
                                value = {postData.title}
                                onChange ={(e)=>setPostData({...postData, title: e.target.value})} />
                     <TextField name="message"
-                               variant = 'outlined'
+                               variant = 'filled'
+                               className={classes.text}
                                label = 'Message'
                                fullWidth
                                value = {postData.message}
                                onChange ={(e)=>setPostData({...postData, message: e.target.value})} />
                     <TextField name="tags"
-                               variant = 'outlined'
+                               variant = 'filled'
+                               className={classes.text}
                                label = 'Tags'
                                fullWidth
                                value = {postData.tags}
@@ -100,7 +103,7 @@ const Form = ({currentId, setCurrentId}) => {
                     <Button 
                         className= {classes.buttonSubmit}
                         variant='contained'
-                        color='primary'
+                        color="primary"
                         size="large"
                         type="submit"
                         fullWidth> Submit </Button>

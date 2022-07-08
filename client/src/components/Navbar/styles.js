@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',
-    backgroundColor: "#211c2d",
+    backgroundColor: "#292437",
   },
   heading: {
     color: 'white',
@@ -32,6 +32,7 @@ export default makeStyles((theme) => ({
   userName: {
     display: 'flex',
     alignItems: 'center',
+    color: 'white',
   },
   brandContainer: {
     display: 'flex',

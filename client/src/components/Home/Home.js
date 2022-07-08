@@ -56,22 +56,25 @@ const Home = () => {
               <Posts setCurrentId={setCurrentId}/>
             </Grid>
             <Grid item xs={12} sm={6} md={3}>
-              <AppBar className={classes.appBarSearch} position = 'static' color = 'inherit'>
+              <AppBar className={classes.appBarSearch} position = 'static' color = 'white'>
                 <TextField
+                  className={classes.text}
                   name ='search'
-                  variant ='outlined'
-                  label ='Search Memories'
+                  variant ='filled'
+                  label ='Search Company'
                   onKeyPress = {handleKeyPress}
                   fullWidth
                   value ={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
-                <Button onClick={searchPost} className={classes.searchButton} color= 'primary' >Search</Button>
+                <Button variant='contained' onClick={searchPost} className={classes.searchButton} color= 'primary' >Search</Button>
               </AppBar>
               <Form currentId={currentId} setCurrentId={setCurrentId}/>
-              <Paper  elevation={6} className={classes.pagination}>
-                <Pagination page={page}  />
-              </Paper>
+              <div className={classes.pagination}>
+                <Pagination  page={page}  />
+              </div>
+              
+              
             </Grid>
           </Grid>
         </Container>

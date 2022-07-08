@@ -4,4 +4,7 @@ export default makeStyles(()=>({
     ul:{
         justifyContent: "space-around",
     },
+    pagination:{
+        backgroundColor: 'white',
+    },
 }));

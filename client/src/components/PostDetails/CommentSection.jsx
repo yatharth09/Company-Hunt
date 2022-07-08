@@ -25,8 +25,8 @@ const CommentSection =({post}) => {
 
     return(
         <div>
-            <div className={classes.commentsOuterContainer}>
-                <div className={classes.commentsInnerContainer}>
+            <div className={classes.commentOuterContainer}>
+                <div className={classes.commentInnerContainer}>
                     <Typography gutterBottom variant="h6">Comments</Typography>
                     {comments.map((c,i) => (
                         <Typography key={i} gutterBottom variant='subtitle1'>
